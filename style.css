@@ -1,0 +1,77 @@
+/* Genel Ayarlar */
+body { 
+    background-color: #050505; 
+    color: #fff; 
+    font-family: 'Courier New', monospace; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0; 
+    padding: 50px; 
+}
+
+/* Üst Bar ve Sayaç (Sağda) */
+.top-bar { 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 700px; 
+    margin-bottom: 50px; 
+    align-items: center;
+}
+.changelog { color: #888; text-decoration: none; font-size: 1.1rem; }
+.changelog:hover { color: #9a031e; }
+.counter-box { 
+    background: #111; 
+    padding: 10px 20px; 
+    border: 1px solid #333; 
+    border-radius: 5px; 
+    color: #9a031e; 
+    font-weight: bold;
+}
+
+/* İndirme Kartı */
+.download-card { 
+    background: #0d0d0d; 
+    border-radius: 12px; 
+    border: 1px solid #333; 
+    width: 320px; 
+    position: relative; 
+    text-align: center; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8); 
+    transition: 0.3s; 
+}
+.download-card:hover { border-color: #9a031e; box-shadow: 0 0 20px rgba(154, 3, 30, 0.4); }
+
+/* Etiket, Logo ve Metinler */
+.recommended-badge { 
+    background-color: #9a031e; 
+    color: #fff; 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    position: absolute; 
+    top: -15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.card-header { padding: 40px 0 20px 0; border-bottom: 1px solid #222; }
+.card-logo { width: 120px; height: 120px; object-fit: contain; } /* Senin logo.png boyutları */
+.card-title { font-size: 1.5rem; font-weight: bold; margin: 15px 0 5px 0; color: #9a031e; }
+.card-desc { color: #888; font-size: 0.9rem; padding: 0 20px 20px 20px; }
+
+/* Alt Kontroller ve Buton */
+.card-controls { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 20px; 
+    background: #000; 
+    border-top: 1px solid #222; 
+    border-bottom-left-radius: 12px; 
+    border-bottom-right-radius: 12px; 
+}
+.install-btn-img { width: 100px; cursor: pointer; transition: 0.2s; }
+.install-btn-img:hover { transform: scale(1.05); }
+.size { color: #555; font-weight: bold; }
