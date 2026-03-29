@@ -16,7 +16,6 @@ body{
     color:var(--text);
 }
 
-
 .site-header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid rgba(255,255,255,0.02)}
 .brand{display:flex;align-items:center;gap:14px}
 .logo{width:72px;height:72px;object-fit:contain;filter:drop-shadow(0 10px 24px rgba(0,0,0,0.6))}
@@ -61,8 +60,17 @@ body{
 .site-footer{padding:18px 40px;color:rgba(255,255,255,0.5);text-align:center;border-top:1px solid rgba(255,255,255,0.02);margin-top:30px}
 
 @media (max-width:860px){
-    .layout{flex-direction:column;padding:18px}
+    .layout{flex-direction:column;padding:12px;gap:12px}
     .sidebar{width:100%;order:2}
+    .site-header{padding:12px}
+    .logo{width:48px;height:48px}
+    .brand h1{font-size:1.1rem}
+    .hero-inner{flex-direction:column;align-items:flex-start}
+    .hero-logo{width:120px}
+    .card-logo{width:100px}
+    .download-card{padding:16px}
+    .btn{padding:8px 10px}
+    img{max-width:100%;height:auto}
 }
 
 .wallpaper-box{height:160px;background:linear-gradient(180deg,rgba(0,0,0,0.15),transparent);display:flex;align-items:center;justify-content:center;border-radius:8px;overflow:hidden}
@@ -74,12 +82,12 @@ body{
 .faq-answer{display:none;color:rgba(255,255,255,0.8);margin-top:6px}
 .faq-answer.open{display:block}
 
-
+/* Open sources panel */
 .open-sources .list li{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .open-sources .list li a{color:var(--text);text-decoration:none}
 .open-sources .muted{margin-bottom:10px}
 
-
+/* About page specific */
 .about-page{max-width:900px;margin:20px auto;padding:24px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px}
 .about-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
 .about-side{background:var(--panel);padding:14px;border-radius:10px}
