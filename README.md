@@ -13,7 +13,7 @@
  <p>
                 <a href="https://github.com/cdassapy/RedRoseOS/releases/tag/redrose" target="_blank" rel="noopener" class="btn" style="background:#5865F2;border:none;color:#fff">RedROSE_source_v0.1</a>
             </p>
-### Discord
+<h3>Discord<h3>
  <p>
                 <a href="https://discord.gg/SsEprcjTAU" target="_blank" rel="noopener" class="btn" style="background:#5865F2;border:none;color:#fff">Join our Discord</a>
             </p>
