@@ -19,4 +19,4 @@
 
 
 ### 👤 Developer
-**assapy** *Security Enthusiast*
+**Chief Saeser** & **YukraZ** *Security Enthusiast*
