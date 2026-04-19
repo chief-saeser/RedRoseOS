@@ -8,12 +8,17 @@
 </head>
 <body>
 
+<div class="bg-blurs">
+    <span class="shape shape1"></span>
+    <span class="shape shape2"></span>
+</div>
+
 <header class="site-header">
     <div class="brand">
         <img src="logo.png" alt="Logo" class="logo">
-        <div>
+        <div class="brand-text">
             <h1>RedRose OS</h1>
-            <p class="tag">Snapshot v0.1 — Arch-based live image</p>
+            <p class="tag">Snapshot releases — security-focused live images</p>
         </div>
     </div>
     <nav class="top-actions">
@@ -22,58 +27,113 @@
     </nav>
 </header>
 
-<main class="layout">
-    <section class="content">
-        <div class="about-page panel">
-            <h2>About RedRose OS</h2>
-            <p>RedRose is a security-focused live distribution built on an Arch Linux rolling base. This snapshot (v0.1) is intended for research, education and short-lived investigative sessions.</p>
+<main class="container">
 
-            <h3>Features</h3>
-            <ol>
-                <li><strong>Arch-Linux Performance</strong>
-                    <ul>
-                        <li><em>Rolling-release base:</em> Built on the latest Linux kernel to stay current, fast and stable.</li>
-                        <li><em>XFCE professional interface:</em> Lightweight, performance-oriented desktop with a burgundy aesthetic tailored for security work.</li>
-                    </ul>
-                </li>
-                <li><strong>Seamless Live Experience</strong>
-                    <ul>
-                        <li><em>Zero-trace operation:</em> Runs entirely in RAM — remove the USB and no files, logs or traces remain on the host.</li>
-                        <li><em>No-password access:</em> Live boot gives immediate root access for fast testing and incident response workflows.</li>
-                    </ul>
-                </li>
-                <li><strong>Integrated Tools & Framework</strong>
-                    <ul>
-                        <li><em>Unified security workspace:</em> Tools and configurations are optimised to work together for a plug-and-play lab experience.</li>
-                        <li><em>High-speed boot architecture:</em> Custom boot optimisations to reduce time-to-operation.</li>
-                    </ul>
-                </li>
-                <li><strong>Hardware Compatibility</strong>
-                    <ul>
-                        <li><em>x86_64 precision:</em> Optimised for modern 64-bit processors to maximise performance.</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <div class="panel" style="margin-top:12px">
-                <strong>Note:</strong>
-                <p>This is a snapshot release — it includes basic tools such as <code>nmap</code> and does not ship package repositories. Future releases will include an installable ISO alongside the live image. If we secure the necessary support, mobile NetHunter-style capabilities may be explored.</p>
+    <section class="about-hero">
+        <div class="hero-inner">
+            <div class="hero-copy">
+                <h2>About RedRose OS</h2>
+                <p class="muted">RedRose is a security-focused live distribution based on an Arch rolling base. Below you will find features, changelogs and a concise comparison between Snapshot 0.2 and 0.1.</p>
             </div>
-
-            <h3>Report bugs & share ideas</h3>
-            <p>If you'd like to report an issue or suggest features, join our Discord community:</p>
-            <p>
-                <a href="https://discord.gg/SsEprcjTAU" target="_blank" rel="noopener" class="btn" style="background:#5865F2;border:none;color:#fff">Join our Discord</a>
-            </p>
-
-            <h3>Credits</h3>
-            <p>Built by itz0day &amp; YukraZ</p>
+            <div class="hero-visual">
+                <img src="logo.png" alt="RedRose logo" class="hero-logo">
+            </div>
         </div>
     </section>
+
+    <section class="about-page panel">
+        <h3>What is RedRose?</h3>
+        <p>RedRose provides privacy-oriented, ephemeral live images for testing, research and incident response workflows. Snapshots are trimmed, curated images designed to boot quickly and provide a stable security toolkit for investigative tasks.</p>
+
+        <h4>Core Features</h4>
+        <ul class="feature-list">
+            <li><strong>Live, RAM-resident operation</strong> — leaves no trace on the host when removed.</li>
+            <li><strong>Optimised toolset</strong> — curated security utilities pre-configured for lab workflows.</li>
+            <li><strong>Performance</strong> — Arch rolling base and kernel tweaks for fast boot and runtime.</li>
+            <li><strong>Custom visuals</strong> — tailored icons, splash assets and a black-red default wallpaper on 0.2.</li>
+        </ul>
+
+        <h3>Snapshot quick comparison</h3>
+        <div class="compare-grid">
+            <div class="compare-card">
+                <div class="pill recommended">Snapshot 0.2</div>
+                <h4>Installer + Snapshot</h4>
+                <p class="muted">Includes an offline installer and curated live environment.</p>
+                <ul class="small-list">
+                    <li><strong>Size:</strong> 2.4G</li>
+                    <li><strong>SHA256:</strong> <code class="sha-block">PLACEHOLDER_SHA_0_2</code></li>
+                    <li><strong>Repo:</strong> <a class="link" href="https://github.com/itz0day/redroseos-snapshotv0.2" target="_blank" rel="noopener">github.com/itz0day/...v0.2</a></li>
+                </ul>
+            </div>
+
+            <div class="compare-card">
+                <div class="pill live">Snapshot 0.1</div>
+                <h4>Live-only snapshot</h4>
+                <p class="muted">Stable, smaller live image for compatibility testing.</p>
+                <ul class="small-list">
+                    <li><strong>Size:</strong> 2.1G</li>
+                    <li><strong>SHA256:</strong> <code class="sha-block">(d3e44140da84f70eaa210809942e27230cb60412b24e50c5bb6a21dda719673b)</code></li>
+                    <li><strong>Repo:</strong> <a class="link" href="https://github.com/itz0day/redroseos-snapshotv0.1" target="_blank" rel="noopener">github.com/itz0day/...v0.1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Differences at a glance</h3>
+        <div class="diff-list">
+            <div class="diff-row"><strong>Installer</strong><span>0.2: Offline installer included — 0.1: Live-only</span></div>
+            <div class="diff-row"><strong>System</strong><span>0.2: GZ mode, build cleanup & kernel tweaks — 0.1: baseline Arch snapshot</span></div>
+            <div class="diff-row"><strong>Terminal / UI</strong><span>0.2: zsh with minimalist [RedRose] prompt; updated fonts — 0.1: default live shell & previous fonts</span></div>
+            <div class="diff-row"><strong>Visuals</strong><span>0.2: new splash, custom icon set and default wallpaper — 0.1: legacy visuals</span></div>
+            <div class="diff-row"><strong>Size & contents</strong><span>0.2: larger (installer + assets) — 0.1: smaller, compatibility-focused</span></div>
+        </div>
+
+        <h3>Changelogs</h3>
+        <details class="changelog-details">
+            <summary>Snapshot 0.2 — Changelog (English)</summary>
+            <div class="changelog-content">
+                <h4>System & Kernel</h4>
+                <ul>
+                    <li>GZ Mode integrated: <code>gz</code> moved to <code>/usr/local/bin</code>, permissions enforced via <code>profiledef.sh</code>.</li>
+                    <li>Build cleanup routines added for <code>work</code> folder and <code>/proc</code> mount issues.</li>
+                </ul>
+                <h4>Interface & Terminal</h4>
+                <ul>
+                    <li>Terminal identity: new minimalist red-white <code>[RedRose] $</code> prompt running on <code>zsh</code>.</li>
+                    <li>Font update: switched to <em>Noto Sans</em> and <em>JetBrains Mono Nerd Font</em> to fix rendering issues.</li>
+                </ul>
+                <h4>Visual</h4>
+                <ul>
+                    <li>New GRUB-friendly 8-bit splash, custom icons (<code>redrose_icon.png</code>) and default black-red wallpaper.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="changelog-details">
+            <summary>Snapshot 0.1 — Changelog (English)</summary>
+            <div class="changelog-content">
+                <p>Snapshot 0.1 is the initial live image snapshot. It contains a compact set of tools for quick forensic and testing tasks. Notable points:</p>
+                <ul>
+                    <li>Live-only image (no installer)</li>
+                    <li>Core utilities such as <code>nmap</code> included</li>
+                    <li>Designed for hardware compatibility and lower-size footprint</li>
+                </ul>
+            </div>
+        </details>
+
+        <h3>Reporting & support</h3>
+        <p>If you find issues or want to suggest features, open an issue on the snapshot repo or join the Discord:</p>
+        <p><a href="https://discord.gg/SsEprcjTAU" class="btn" style="background:#5865F2;border:none;color:#fff" target="_blank" rel="noopener">Join our Discord</a></p>
+
+        <h3>Credits</h3>
+        <p>Built by Assapy &amp; YukraZ — maintained by the RedRose community.</p>
+    </section>
+
 </main>
 
 <footer class="site-footer">
     <small>© RedRose Project</small>
+    <div style="margin-top:8px"><a href="index.html" class="link">Return to Download page</a></div>
+    <div style="height:28px"></div>
 </footer>
 
 </body>
